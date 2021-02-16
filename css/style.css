@@ -1,0 +1,89 @@
+:root{
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+.attribution {
+  margin-top: 150px;
+  font-size: 11px;
+  text-align: end;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body{
+  background-color: var(--Dark-cyan);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body::before, body::after{
+  content: '';
+  display: block;
+  width: 1000px;
+  height: 1000px;
+  position: fixed;
+  background-size: 100% 100%;
+    z-index: -1;
+  
+}
+
+body::before{
+  background-image: url(../images/bg-pattern-top.svg);
+  top: -65%;
+  left: -15%;
+}
+
+body::after{
+  background-image: url(../images/bg-pattern-bottom.svg);
+  bottom: -85%;
+  right: -15%;
+}
+
+.card-container{
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card-foto {
+  margin-top: -50px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-informacion-nombre{
+  font-weight: bold;
+}
+.card-informacion-pais {
+  margin-left: 25px;
+
+}
+.card-informacion-gray-text{
+  color: var(--Dark-gray)
+}
+.card-footer{
+  border-top: 2px  solid var(--Dark-gray);
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-footer-stats{
+  width: 100%;
+  text-align: center;
+}
+.card-footer-info{
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  line-height: 1.5;
+}
